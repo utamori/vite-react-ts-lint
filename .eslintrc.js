@@ -9,7 +9,6 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:jsx-a11y/recommended",
-    "prefer-arrow",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "prettier",
@@ -24,7 +23,14 @@ module.exports = {
     sourceType: "module",
     tsconfigRootDir: __dirname,
   },
-  plugins: ["@typescript-eslint", "import", "jsx-a11y", "react", "react-hooks"],
+  plugins: [
+    "@typescript-eslint",
+    "import",
+    "jsx-a11y",
+    "prefer-arrow",
+    "react",
+    "react-hooks",
+  ],
   root: true,
   rules: {
     "react/react-in-jsx-scope": "off",
