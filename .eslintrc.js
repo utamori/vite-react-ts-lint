@@ -9,6 +9,7 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:jsx-a11y/recommended",
+    "prefer-arrow",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "prettier",
@@ -56,6 +57,15 @@ module.exports = {
         jsx: "never",
         ts: "never",
         tsx: "never",
+      },
+    ],
+    // アロー関数を強制する
+    "prefer-arrow/prefer-arrow-functions": [
+      "error",
+      {
+        disallowPrototype: true,
+        singleReturnOnly: false,
+        classPropertiesAllowed: false,
       },
     ],
   },

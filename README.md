@@ -38,3 +38,6 @@ npm install stylelint stylelint-config-standard stylelint-order stylelint-config
 "lint:style": "stylelint 'src/**/*.{css,less,sass,scss}'",
 "lint:style:fix": "stylelint --fix 'src/**/*.{css,less,sass,scss}'"
 
+# アロー関数を強制する
+
+npm install eslint-plugin-prefer-arrow --save-dev
