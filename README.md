@@ -13,7 +13,7 @@
 - @typescript-eslint/parser”
 
 
-prettier 導入
+## prettier 導入
 
 npm install prettier eslint-config-prettier --save-dev
 
@@ -24,4 +24,17 @@ npx eslint-config-prettier 'src/**/*.{js,jsx,ts,tsx}'
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:conflict": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "preinstall": "typesync”
+
+## stylelint 導入
+
+npm install stylelint stylelint-config-standard stylelint-order stylelint-config-recess-order --save-dev
+
+
+"lint": "npm run -s lint:style; npm run -s lint:es",
+"lint:fix": "npm run -s lint:style:fix && npm run -s lint:es:fix",
+"lint:es": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+"lint:es:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
+"lint:conflict": "eslint-config-prettier 'src/**/*.{js,jsx,ts,tsx}'",
+"lint:style": "stylelint 'src/**/*.{css,less,sass,scss}'",
+"lint:style:fix": "stylelint --fix 'src/**/*.{css,less,sass,scss}'"
 

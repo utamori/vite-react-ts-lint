@@ -1,8 +1,11 @@
 {
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
-  "editor.formatOnSave": false,
   "eslint.packageManager": "npm",
   "typescript.tsdk": "./node_modules/typescript/lib",
 
@@ -24,5 +27,5 @@
   },
   "[typescriptreact]": {
     "editor.formatOnSave": true
-  },
+  }
 }
