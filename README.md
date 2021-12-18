@@ -58,4 +58,3 @@ tscondig.jsonの`compilerOptions.path`は、実際にパス解決はしてくれ
 ```
 
 npm install eslint-import-resolver-typescript --save-dev
-
