@@ -75,13 +75,6 @@ module.exports = {
       },
     ],
   },
-  // settings: {
-  //   "import/resolver": {
-  //     alias: {
-  //       map: [["@", "./src"]],
-  //     },
-  //   },
-  // },
   settings: {
     react: { version: "detect" },
     "import/resolver": {
