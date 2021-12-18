@@ -77,9 +77,15 @@ module.exports = {
   },
   // settings: {
   //   "import/resolver": {
-  //     node: {
-  //       paths: ["src"],
+  //     alias: {
+  //       map: [["@", "./src"]],
   //     },
   //   },
   // },
+  settings: {
+    react: { version: "detect" },
+    "import/resolver": {
+      typescript: {},
+    },
+  },
 };

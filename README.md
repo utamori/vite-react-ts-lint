@@ -27,7 +27,7 @@ npx eslint-config-prettier 'src/**/*.{js,jsx,ts,tsx}'
 
 ## stylelint 導入
 
-npm install stylelint stylelint-config-standard stylelint-order stylelint-config-recess-order --save-dev
+npm install stylelint stylelint-config-standard stylelint-order stylelint-config-recess-order stylelint-config-prettier --save-dev
 
 
 "lint": "npm run -s lint:style; npm run -s lint:es",
@@ -41,3 +41,21 @@ npm install stylelint stylelint-config-standard stylelint-order stylelint-config
 # アロー関数を強制する
 
 npm install eslint-plugin-prefer-arrow --save-dev
+
+
+
+# パス解決について
+
+tscondig.jsonの`compilerOptions.path`は、実際にパス解決はしてくれない
+`vite.config.ts`で設定する必要がある
+
+```json
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+```
+
+npm install eslint-import-resolver-typescript --save-dev
+
