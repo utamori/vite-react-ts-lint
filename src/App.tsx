@@ -1,9 +1,11 @@
-import { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import logo from "./logo.svg";
+import { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+  const diffNum = 1,
+    initialNum = 0,
+    [count, setCount] = useState(initialNum);
 
   return (
     <div className="App">
@@ -11,7 +13,10 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
+          <button
+            type="button"
+            onClick={() => setCount((num) => num + diffNum)}
+          >
             count is: {count}
           </button>
         </p>
@@ -40,6 +45,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;

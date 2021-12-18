@@ -27,5 +27,43 @@ module.exports = {
   root: true,
   rules: {
     "react/react-in-jsx-scope": "off",
+    // void 演算子の（式としての）使用を禁ずるルール。
+    // 非同期処理の場合void文を記述する場合があるので、文としての使用のみを許可している
+    "no-void": [
+      "error",
+      {
+        allowAsStatement: true,
+      },
+    ],
+    // すぐに使わない変数は_をつける
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        vars: "all",
+        args: "after-used",
+        argsIgnorePattern: "_",
+        ignoreRestSiblings: false,
+        varsIgnorePattern: "_",
+      },
+    ],
+    // importの際に拡張子つけるか
+    "import/extensions": [
+      "error",
+      // 以下は拡張子つけなくて良い
+      "ignorePackages",
+      {
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+      },
+    ],
   },
+  // settings: {
+  //   "import/resolver": {
+  //     node: {
+  //       paths: ["src"],
+  //     },
+  //   },
+  // },
 };
